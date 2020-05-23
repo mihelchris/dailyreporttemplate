@@ -3,7 +3,7 @@
 
 > This is a personal project built for educational purposes.  
 
-Simple editable Daily Scrum Report template built with React.
+Simple editable Daily Scrum Report template built with React. 
 
 ![Sample Daily Report](https://i.imgur.com/Qfej0wl.png)
 
@@ -14,6 +14,8 @@ At [Aleph Labs](https://aleph-labs.com), we're following the practice of submitt
 Daily Journal is not only a way of monitoring someone's progress but also a great channel of communication between employees and their managers, so it's important to not only include project-related items but also vital indicators, personal issues, or anything that may influence your wellbeing.
 
 ## How to use
+
+You can **try the Template [here](https://qq78u.csb.app/)** without installing.
 
 **Make sure** you have have [Node](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/) on your machine. 
 

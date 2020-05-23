@@ -5,6 +5,6 @@ const sliders = ["Mood", "Energy", "Productivity"]
 
 export default function ValueSlider() {
     return (
-        sliders.map(value => <Slider title={value}/>)
+        sliders.map(value => <Slider title={value} key={value} />)
     )
 }

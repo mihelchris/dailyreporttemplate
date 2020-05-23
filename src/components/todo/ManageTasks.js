@@ -42,6 +42,7 @@ function ManageTasks(props) {
                 {tasks.map((task, index) => (
                     <div
                         className = {`task${task.completed ? " completed" : ""}`}
+                        key = {index}
                     >
                         <TextField
                             value={task.title} 
