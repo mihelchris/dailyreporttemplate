@@ -17,9 +17,9 @@ Daily Journal is not only a way of monitoring someone's progress but also a grea
 
 **Make sure** you have have [Node](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/) on your machine. 
 
-Clone or download this repo, open Terminal and navigate to the template folder. Check [this link](https://www.codecademy.com/articles/command-line-commands) to learn more about Terminal commands.
+Clone or download this repo, open Terminal and navigate to the template folder. Check [this link](https://www.codecademy.com/articles/command-line-commands) to learn more about Terminal commands. 
 
-Run the app in the development mode using  `yarn start` . Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Run `yarn` to install the dependencies. Run the app in the development mode using  `yarn start` . Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 At the moment, the template **doesn't support** export to PDF and print, but it's planned soon.
 
