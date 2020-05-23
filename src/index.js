@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import DocumentMeta from 'react-document-meta';
+
+const meta = {
+  title: 'Daily Report',
+  description: 'A new way of creating Daily Reports',
+  // canonical: '',
+  meta: {
+      charset: 'utf-8',
+      name: {
+          keywords: 'journal, report, daily report, react'
+      }
+  }
+}
 
 ReactDOM.render(
   <React.StrictMode>
+    <DocumentMeta {...meta} />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

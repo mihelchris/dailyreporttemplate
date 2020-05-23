@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+$header-color: rgba($secondary, .75);
+
+h1, h2, h3 {
+    @include header-style();
+    font-size: $font-size;
+    color: $header-color;
+    margin: $base * 2 0;
+}
+  
+.name {
+    font-size: $font-size * 1.5;
+    margin-bottom: 0;
+    letter-spacing: 0;
+    color: $secondary;
+    text-transform: none;
+}
+
+.occupation {
+    margin-top: 0;
+    color: $header-color;
+}
+
+.date {
+    font-size: $font-size;
+    color: $secondary;
+}

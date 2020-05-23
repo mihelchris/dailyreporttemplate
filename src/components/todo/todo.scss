@@ -1,0 +1,75 @@
+@import '../../styles/variables';
+
+/* Task */
+
+$task-padding: $base*2.5;
+
+.task{
+  position: relative;
+  display: block;
+  padding: $task-padding*1.25;
+  margin: $task-padding*.75 0;
+  @include neomorphic-style--long($primary, $base);
+  border-radius: $border-radius;
+  overflow: hidden;
+  transition: $transition--smooth;
+
+  & button {
+    @include button-style($base*.75);
+    margin: 0;
+
+    &:not(:first-child) {
+      margin-left: $base;
+    }
+  }
+
+  & input, & p {
+    margin: 0;
+  }
+
+  &.completed {
+    padding-top: $task-padding*2;
+    &:after {
+      position:absolute;
+      content:'';
+      top:$task-padding;
+      left:$task-padding*1.5;
+      display: block;
+      width: 3px;
+      height: 6px;
+      border: solid rgba($secondary, .5);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+    &:before {
+      position:absolute;
+      content:'COMPLETED';
+      font-size: $font-size*.75;
+      line-height: 1;
+      @include header-style();
+      top:$task-padding;
+      left:$task-padding*2.15;
+      display: block;
+      color: rgba($secondary, .5);
+    }
+    & .task-complete {
+      display: none;
+    }
+  }
+
+  &-buttons {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: $transition--smooth;
+    z-index: 0;
+  }
+
+  &:hover {
+    padding-bottom: $task-padding*3;
+    .task-buttons {
+      bottom: $task-padding;
+      opacity: 1;
+    }
+  }
+}

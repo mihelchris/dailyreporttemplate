@@ -1,0 +1,12 @@
+html, body {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: 400;
+  line-height: 1.75;
+  color: $secondary;
+}
+
+body {
+  background: $primary;
+  margin: $base * 3 0;
+}

@@ -1,0 +1,41 @@
+input, textarea {
+    @include neomorphic-style--inset($primary);
+    box-sizing:border-box;
+    width: 100%;
+    max-width: 100%;
+    border-radius: $border-radius;
+    border: none;
+    outline: none;
+    padding: $base * 2 $base * 3;
+    margin: 0;
+    color: $secondary;
+    font-size: $font-size;
+    transition: $transition--smooth;
+  
+    &:focus {
+      @include neomorphix-style--inset_deep($primary);
+    }
+  
+    &.visible {
+      margin-bottom: 0;
+    }
+}
+  
+div[editext="edit-container"] {
+    flex-direction: column;
+    align-items: baseline;
+    
+    & div {
+      position: relative;
+      margin: $base 0 0 0;
+    }
+}
+  
+div[editext="view"] {
+    transition: $transition--smooth;
+    cursor: pointer;
+
+    &:hover, &:focus {
+        background: rgba($secondary, .05);
+    }
+}

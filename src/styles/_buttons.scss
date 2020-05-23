@@ -1,0 +1,24 @@
+button, .button {
+  @include button-style($base);
+  @include header-style();
+  margin: $base * 3 0;
+  color: $secondary;
+  cursor: pointer;
+
+  &.edit, &.cancel, &.save {
+    @include button-style($base * .75);
+    margin: 0;
+  }
+
+  &.edit {
+    display: none;
+  }
+
+  &.cancel {
+    margin-left: $base;
+  }
+
+  &.add-item {
+    margin-top: $base * 2;
+  }
+}

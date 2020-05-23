@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+
+.box {
+    @include neomorphic-style--long($primary, $base);
+    padding: $base * 3;
+    border-radius: $border-radius;
+  
+    & input {
+      margin: 0;
+    }
+}
+
+@media print {
+  .box {
+    padding: 0;
+  }
+}

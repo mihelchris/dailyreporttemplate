@@ -1,0 +1,73 @@
+@import '../../styles/variables';
+
+$sliders: (
+    'low' : ($warning-primary, $warning-secondary), 
+    'medium' : ($info-primary, $info-secondary), 
+    'high' : ($success-primary, $success-secondary)
+);
+
+$slider-height: $base * 6;
+$slider-padding: $base * 2;
+
+.rangeslider {
+  position: relative;
+  margin: $slider-padding 0;
+  @include neomorphic-style--long($primary, $base);
+  border-radius: $border-radius;
+  border: 1px solid $primary;
+  overflow: hidden;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &-horizontal {
+    height: $slider-height;
+    border-radius: $border-radius;
+
+    & .rangeslider__handle {
+      width: $slider-height;
+      height: 100%;
+      background: $primary;
+      box-shadow: none;
+      border-radius: 0 $border-radius $border-radius 0;
+      border: none;
+      outline: none;
+      cursor: ew-resize;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__fill {
+    @each $slider, $color in $sliders {
+        $color-primary: nth($color, 1);
+        $color-secondary: nth($color, 2);
+        .#{$slider} & {
+            @include linear-gradient($color-primary, $color-secondary);
+        }
+    }
+  }
+
+  &__title {
+    @include absolute-middle();
+    @include header-style();
+    left:$slider-padding;
+    margin:0;
+    padding:0;
+    color: $secondary;
+    font-size:$font-size--small;
+    line-height: 1;
+    z-index: 9999;
+  }
+
+  &__emotion {
+    @include absolute-middle();
+    right:$slider-padding;
+    font-size: $font-size;
+    line-height: 1;
+    z-index: 9999;
+  }
+}
