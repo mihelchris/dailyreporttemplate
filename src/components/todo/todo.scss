@@ -5,14 +5,29 @@
 $task-padding: $base*2.5;
 
 .task{
+
+  &s{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media only screen and (max-width:960px) {
+    & {
+      width: 100%;
+    }
+  }
+
+  width: calc(50% - 10px);
+  box-sizing: border-box;
   position: relative;
-  display: block;
   padding: $task-padding*1.25;
-  margin: $task-padding*.75 0;
+  margin: $task-padding*.5 0;
   @include neomorphic-style--long($primary, $base);
   border-radius: $border-radius;
   overflow: hidden;
   transition: $transition--smooth;
+
 
   & button {
     @include button-style($base*.75);
