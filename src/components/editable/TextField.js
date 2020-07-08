@@ -25,6 +25,7 @@ export default function TextField (props) {
             type="text"
             value={props.value}
             onSave={props.onSave}
+            submitOnEnter
         />
     )
 }
